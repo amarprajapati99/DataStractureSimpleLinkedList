@@ -43,6 +43,13 @@ public class MyLinkedList {
             this.tail = myNode;
         }
     }
+    /* @Description-  delete the first element in the linked list of sequence 56->30->70 */
+
+    public INode pop(){
+        INode tempNode = this.head;
+        this.head = this.head.getNext();
+        return tempNode;
+    }
 
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes : ");
