@@ -22,6 +22,14 @@ public class MyLinkedList {
         }
     }
 
+    /* @Description insert node into first node, second node and third node. */
+    
+    public void insert(INode myNode, INode newNode) {
+        INode tempNode = myNode.getNext();
+        myNode.setNext(newNode);
+        newNode.setNext(tempNode);
+    }
+
 /* @Description- this is used  to appending the data */
     
     public void append(INode myNode) {
