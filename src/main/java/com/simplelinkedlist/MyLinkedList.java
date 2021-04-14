@@ -62,6 +62,18 @@ public class MyLinkedList {
         tempNode = tempNode.getNext();
         return tempNode;
     }
+/* @Description- to search linked list to find Node with value 30 */
+
+    public boolean serchElement(INode serchNode){
+        INode tempNode = this.head;
+        while (tempNode != null){
+            if (tempNode.getKey().equals(serchNode.getKey())){
+                return true;
+            }
+            tempNode = tempNode.getNext();
+        }
+        return false;
+    }
 
     public void printMyNodes() {
         StringBuffer myNodes = new StringBuffer("My Nodes : ");
