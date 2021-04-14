@@ -8,7 +8,9 @@ import org.junit.jupiter.api.Test;
 * Next 30 is added to 70, Finally 56 is added to 30 and  LinkedList Sequence: 56->30->70.
 * To create a linked list by appending 30, 70, 56  and linked list Sequence will be : 56->30->70.
 * To insert node 30 between 56 and 70 final sequence will be: 56->30->70.
-* To delete the first element in the linked list of sequence 56->30->70 */
+* To delete the first element using pop in the linked list of sequence 56->30->70
+* To delete the last element using pop in the linked list of sequence 56->30->70 */
+
 public class MyLinkedListTest {
     @Test
     public void given3NumbersWhenAddedToLinkedListShouldAddedToTop() {
@@ -71,6 +73,21 @@ public class MyLinkedListTest {
         myLinkedList.printMyNodes();
         boolean result = myLinkedList.head.equals(mySecondNode) &&
                 myLinkedList.tail.equals(myThirdNode);
+        Assertions.assertTrue(result);
+    }
+    @Test
+    public void givenLastElement_WhenDeleted_ShouldPassLinkedListTest() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.insert(myFirstNode, mySecondNode);
+        myLinkedList.popLast();
+        myLinkedList.printMyNodes();
+        boolean result = myLinkedList.head.equals(myFirstNode) &&
+                myLinkedList.tail.equals(mySecondNode);
         Assertions.assertTrue(result);
     }
 }

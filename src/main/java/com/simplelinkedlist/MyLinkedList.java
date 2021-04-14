@@ -22,7 +22,7 @@ public class MyLinkedList {
         }
     }
 
-    /* @Description insert node into first node, second node and third node. */
+    /* @Description- insert node into first node, second node and third node. */
 
     public void insert(INode myNode, INode newNode) {
         INode tempNode = myNode.getNext();
@@ -48,6 +48,18 @@ public class MyLinkedList {
     public INode pop(){
         INode tempNode = this.head;
         this.head = this.head.getNext();
+        return tempNode;
+    }
+
+    /* @Description-  delete the last element in the linked list of sequence 56->30->70 */
+
+    public INode popLast(){
+        INode tempNode = head;
+        while (!tempNode.getNext().equals((tail))){
+            tempNode = tempNode.getNext();
+        }
+        this.tail = tempNode;
+        tempNode = tempNode.getNext();
         return tempNode;
     }
 
