@@ -11,7 +11,8 @@ import org.junit.jupiter.api.Test;
 * To delete the first element using pop in the linked list of sequence 56->30->70.
 * To delete the last element using pop in the linked list of sequence 56->30->70.
 * To search linked list to find Node with value 30.
-* To insert 40 after 30 to the Linked List sequence of 56->30->70 and search the element and pop the element */
+* To delete 40 from the linked list sequence of 56->30->40->70 and show the size of linked list is 3.
+* To insert 40 after 30 to the Linked List sequence of 56->30->70 */
 
 public class MyLinkedListTest {
     @Test
@@ -105,6 +106,22 @@ public class MyLinkedListTest {
         myLinkedList.insert(myFirstNode, mySecondNode);
         myLinkedList.printMyNodes();
         boolean result = myLinkedList.serchElement(myThirdNode);
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void givenElements_SearchFirstNodeAndInsertSecondNode_ShouldPassTest() {
+        MyNode<Integer> myFirstNode = new MyNode<>(56);
+        MyNode<Integer> mySecondNode = new MyNode<>(30);
+        MyNode<Integer> myThirdNode = new MyNode<>(70);
+        MyNode<Integer> myFourthNode = new MyNode<>(40);
+        MyLinkedList myLinkedList = new MyLinkedList();
+        myLinkedList.add(myFirstNode);
+        myLinkedList.append(myThirdNode);
+        myLinkedList.insert(myFirstNode, mySecondNode);
+        myLinkedList.printMyNodes();
+        boolean result = myLinkedList.serchAndInsertElement(mySecondNode, myFourthNode);
+        myLinkedList.printMyNodes();
         Assertions.assertTrue(result);
     }
 

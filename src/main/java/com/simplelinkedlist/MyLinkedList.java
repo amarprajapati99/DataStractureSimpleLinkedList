@@ -84,6 +84,19 @@ public class MyLinkedList {
         }
         return size;
     }
+    /* to search and insert element. */
+
+    public boolean serchAndInsertElement(INode serchNode, INode insertNode){
+        INode tempNode = this.head;
+        while (tempNode != null){
+            if (tempNode.getKey().equals(serchNode.getKey())){
+                insert(tempNode, insertNode);
+                return true;
+            }
+            tempNode = tempNode.getNext();
+        }
+        return false;
+    }
 
 /* @Description- To search the element and delete  the element*/
 
