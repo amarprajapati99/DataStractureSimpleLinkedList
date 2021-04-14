@@ -3,11 +3,11 @@ package com.simplelinkedlist;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-/* @Description- create Linked List by adding 30 and 56 to 70.
+/* @Description- Create Linked List by adding 30 and 56 to 70.
 * Node with data 70 is First Created
 * Next 30 is added to 70, Finally 56 is added to 30 and  LinkedList Sequence: 56->30->70
 * To create a linked list by appending 30, 70, 56  and linked list Sequence will be : 56->30->70
-*  To insert node 30 between 56 and 70 final sequence will be: 56->30->70*/
+* To insert node 30 between 56 and 70 final sequence will be: 56->30->70*/
 public class MyLinkedListTest {
     @Test
     public void given3NumbersWhenAddedToLinkedListShouldAddedToTop() {

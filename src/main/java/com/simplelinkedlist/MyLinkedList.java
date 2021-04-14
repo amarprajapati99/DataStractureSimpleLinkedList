@@ -23,7 +23,7 @@ public class MyLinkedList {
     }
 
     /* @Description insert node into first node, second node and third node. */
-    
+
     public void insert(INode myNode, INode newNode) {
         INode tempNode = myNode.getNext();
         myNode.setNext(newNode);
